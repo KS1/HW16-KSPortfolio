@@ -1,0 +1,260 @@
+
+:root {
+     /* using CSS variables for header and footer */
+    --theme-color: #13293d;
+    --theme-font-color: #ffffff;     
+    --theme-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --section-background-color: #cecce7;
+    --section-font-color: #13293d;   
+    --section-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* header class */
+/* Class Selectors select all elements with that class */
+.header {
+    padding: 20px;
+    /* using CSS variables for font-family, background-color and color */
+    font-family: var(--theme-font-family);      
+    background-color: var(--theme-color);
+    color: var(--theme-font-color);              
+}
+  
+/* header h1 class */
+.header h1 {
+    display: inline-block;
+    font-size: 48px;   
+}
+
+/* header div class */
+.header div {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-size: 20px;    
+}
+
+/* header div ul class */
+.header div ul {
+    list-style-type: none;       
+}
+
+.header div ul li {
+    display: inline-block;
+    margin-left: 25px;    
+}
+
+/* header div ul li class */
+.header div ul li a {    
+    color: #ffffff;
+}
+
+/* content class */
+.content {
+    width: 97%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* main section class */
+.main-sections {
+    margin-bottom: 10px;
+    padding: 50px;
+    height: auto;
+    
+    /* using CSS variables for section font family, background color and font color */
+    font-family: var(--section-font-family);
+    background-color: var(--section-background-color);
+    color: var(--section-font-color);
+
+    /* using Flex to adjust the contents if screen size changes */
+    display: flex;
+    /* Forces elements to the next line if they don't fit */
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 2%;
+}
+
+.main-sections img {
+    max-height: 200px;
+}
+
+.main-sections h2 {
+    margin-bottom: 20px;
+    flex: 0 0 80%; 
+    font-size: 36px;   
+}
+
+.main-sections h2 p {
+    margin-bottom: 20px;    
+    font-size: 17px;
+    flex: 0 0 80%;     
+}
+
+.main-sections p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    flex: 0 0 100%;
+    padding: 20px;       
+}
+
+.main-sections p a{
+    text-align: right;
+    margin: 5%;
+}
+
+/* footer class */
+.footer { 
+    padding: 30px;
+    clear: both;   
+    text-align: center;
+    font-size: x-small;    
+    
+    /* using CSS variables for font-family, background-color and color */
+    font-family: var(--theme-font-family);  
+    background-color: var(--theme-color);
+    color: var(--theme-font-color);  
+}
+
+/* title in main section */
+.titleClass{
+    font-size: xx-large;
+}
+
+.backToTop{
+    text-align: right;    
+}
+
+.aboutmeParaClass{
+    font-family: var(--theme-font-family);   
+    margin-left: 50px;
+}
+
+.workImage {
+    max-width: 80px;   
+    width:100px;
+    height:100px;
+    margin-top: 10px;
+}
+
+/* .workImage:hover {
+    max-width: 120px;   
+} */
+/* .workImage:hover { transform: scale(1.5); }  */
+
+.containerClass {
+    display: flex;
+    font-size: small;    
+}
+
+/* Reference - https://www.w3schools.com/howto/howto_css_image_text.asp */
+.container {
+    position: relative;
+    text-align: center;  
+    color: var(--section-font-color) ;
+    margin: 5%;
+  }
+
+  /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card */
+  .flip-card {
+    background-color: transparent;
+    /* width: 300px;
+    height: 300px; */
+    width: 120px;
+    height: 120px;
+    /* perspective: 1000px; */
+    perspective: 1000px;
+  }
+  
+  .flip-card-about {
+    background-color: transparent;
+    width: 700px;
+    height: 250px; 
+    /* perspective: 1000px; */
+    perspective: 1000px;
+    /* font-size: small; */    
+  }
+
+  .flip-card-about-img {
+    background-color: transparent;
+    width: 220px;
+    height: 250px; 
+    /* perspective: 1000px; */
+    perspective: 1000px;
+    /* font-size: small; */    
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .flip-card-inner-about {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* text-align: center; */
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    /* background-color:#4b49b1; */
+    color: black;
+    background-image: linear-gradient(#cecce7,#a49ef1);
+  }
+
+  .flip-card-front-about {
+    /* background-color:#4b49b1; */
+    color: black;
+    /* background-image: linear-gradient(#cecce7,#a49ef1); */
+    text-align: left;
+  }
+  
+  .flip-card-back {
+    position: absolute;
+    /* background-color: #2980b9; */
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+
+
+ /* using media query to adjust the contents if screen width is reduced below 600px */
+@media only screen and (max-width: 600px) {
+     /* adjust the height of header */
+     .header  {
+        flex: 0 0 20%;    
+        height: 120px;
+    }
+     /* changes the background color of main section */
+    .main-sections {   
+      background-color:rgb(224, 210, 233);      
+    }
+    /* removes border-right in main section h2 */
+    .main-sections > h2 {        
+        flex: 0 0 20%;      
+        border-right: none;    
+        padding: 50px;
+    }
+  }
